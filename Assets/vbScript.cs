@@ -5,20 +5,24 @@ using Vuforia;
 
 public class vbScript : MonoBehaviour, IVirtualButtonEventHandler
 {
-    private GameObject vbButtonObject;
-    // Start is called before the first frame update
+    public GameObject model, VirtualButton;
+
     void Start()
     {
-
-        vbButtonObject = GameObject.Find("actionButton");
-        vbButtonObject.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+        VirtualButton.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+        model = GameObject.Find("model");
+        model.SetActive(false);
     }
 
-    public void OnButtonPressed (VirtualButtonBehaviour vb) {
-        Debug.Log("onbuttonpressed!");
-    } 
-    public void OnButtonReleased(VirtualButtonBehaviour vb) {
+    public void OnButtonPressed(VirtualButtonBehaviour vb)
+    {
+        Debug.Log("testje");
+        model.SetActive(true);
+    }
 
-        Debug.Log("niks!");
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
+    {
+        model.SetActive(true);
+
     }
 }
