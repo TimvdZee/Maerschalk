@@ -27,8 +27,13 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     #region UNITY_MONOBEHAVIOUR_METHODS
 
+    public GameObject button;
+
+
     protected virtual void Start()
     {
+        button = GameObject.Find("OpenTreasure");
+        button.SetActive(false);
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
@@ -83,6 +88,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingFound()
     {
+        Debug.Log("Hoi");
+        button.SetActive(true);
+        Debug.Log("Doei");
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
@@ -98,6 +106,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+       
+
+
     }
 
 
