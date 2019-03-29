@@ -34,7 +34,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     protected virtual void Start()
     {
         TreasureChest = GameObject.Find("TreasureChest");
-        TreasureChest.SetActive(false);
+        TreasureChest.SetActive(true);
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);

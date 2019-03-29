@@ -134,6 +134,7 @@
     <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Shaders\TimedDiffuseNoCull.shader" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\maerschalkar.xml" />
     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
     <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
