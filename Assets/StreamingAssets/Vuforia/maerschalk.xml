@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="CollegaSticker2" size="8.000000 8.000000" />
+    <ImageTarget name="CollegaSticker" size="8.000000 8.007687" />
     <ImageTarget name="schattarget" size="0.800000 0.801667" />
   </Tracking>
 </QCARConfig>
